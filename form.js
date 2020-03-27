@@ -39,11 +39,6 @@ app.post('/index', UrlencodedParser, (req, res) => {
    //console.log(req.body.name);
    //console.log(req.body.email);
    //console.log(req.body.password);
-   var bind = [];
-        // loop in the attributes of the object and push the values into the bind array.
-        for(prop in body){
-            bind.push(req.body[prop]);
-        }
    conn.connect(function(err){
        if(err) throw err;
        console.log('Connection Successful!');
